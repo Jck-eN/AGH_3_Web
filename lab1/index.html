@@ -9,32 +9,57 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div id="logo"></div>
-            <ul>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-            </ul>
-        </nav>
-        <section>
-            <h1>Header text</h1>
-            <p>Some info</p>
-            <button>Some button</button>
-        </section>
-    </header>
-    <article id="content">
+    <div id="container">
+        <header id="main-header">
+            <nav id=main-navbar>
+                <div id="logo"><img src="" alt="logo-image"></div>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 2</a></li>
+                </ul>
+                <button>nav button</button>
+            </nav>
+            <section>
+                <h1>Header text</h1>
+                <p>Some info</p>
+                <button>Some button</button>
+            </section>
+        </header>
         <section id="main-description">
             <div id="main-description-text">
                 <h2>Description title</h2>
                 <p>Some description text</p>
             </div>
-            <div id="main-description-image">
-                <img src="">
+        </section>
+
+        <section id="main-description-image">
+            <img src="" alt="main-image">
+        </section>
+        <section id="cards">
+            <div class="single-card">
+                <div class="card-image">
+                    <div class="card-bottom">
+                        <h1>Card title</h1>
+                        <img src="#">
+                    </div>
+                    <div class="card-bottom">
+                        <h2>Card subtitle</h2>
+                        <div class="card-description">Card desription</div>
+                    </div>
+                </div>
             </div>
         </section>
-    </article>
-
+        </article>
+        <footer id="main-footer">
+            <div id="footer-logo">
+                <img src="" alt="footer-image">
+            </div>
+            <div id="footer-content">Come footer text</div>
+            <div id="footer-links"></div>
+            <div id="footer-media"></div>
+        </footer>
+    </div>
 
     <script src="js/scripts.js"></script>
 </body>

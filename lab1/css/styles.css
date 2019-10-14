@@ -1,0 +1,34 @@
+#container {
+    display: grid;
+    grid-template-rows: auto auto auto 200px;
+    grid-template-columns: [col-left] 70% [col-middle] 30% [col-right];
+    grid-template-areas: "header header" "main main-img" "cards cards" "footer footer";
+}
+
+#main-header {
+    background-color: lightblue;
+    grid-area: header;
+    display: grid;
+    grid-template-rows: [navbar-begin] 60px [header-begin] auto
+}
+
+#main-description {
+    background-color: thistle;
+    grid-area: main;
+}
+
+#main-description-image {
+    grid-area: main-img;
+}
+
+#cards {
+    background-color: beige;
+    grid-area: cards;
+}
+
+#main-footer {
+    background-color: lightgreen;
+    grid-area: footer;
+}
+
+#main-header {}
