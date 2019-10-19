@@ -1,8 +1,14 @@
+body {
+    margin: 0px;
+}
+
 #container {
+    margin: auto;
+    width: 1200px;
     display: grid;
     grid-template-rows: auto auto auto 200px;
-    grid-template-columns: [col-left] 70% [col-middle] 30% [col-right];
-    grid-template-areas: "header header" "main main-img" "cards cards" "footer footer";
+    grid-template-columns: [col-left] 33% [col-middle] 34% [col-middle-2]33% [col-right];
+    grid-template-areas: "header header header" "main main main-img" "card1 card2 card3" "footer footer footer";
 }
 
 #main-header {
@@ -12,6 +18,31 @@
     grid-template-rows: [navbar-begin] 60px [header-begin] auto
 }
 
+#main-navbar {
+    background-color: dimgrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#main-navbar li {
+    display: inline-block;
+}
+
+#main-navbar #logo {
+    align-self: flex-end;
+    justify-self: end
+}
+
+#main-navbar button {
+    align-self: flex-end;
+    justify-self: end
+}
+
+#header-title {
+    text-align: center;
+}
+
 #main-description {
     background-color: thistle;
     grid-area: main;
@@ -19,16 +50,26 @@
 
 #main-description-image {
     grid-area: main-img;
+    margin: auto;
 }
 
-#cards {
+#card1 {
     background-color: beige;
-    grid-area: cards;
+    grid-area: card1;
+}
+
+#card2 {
+    background-color: beige;
+    grid-area: card2;
+}
+
+#card3 {
+    background-color: beige;
+    grid-area: card3;
 }
 
 #main-footer {
     background-color: lightgreen;
     grid-area: footer;
+    display: grid;
 }
-
-#main-header {}
