@@ -1,18 +1,39 @@
 body {
     margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    text-shadow: 0px 0px 14px black;
+    font-weight: lighter;
+    border: solid white 2px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+button:active {
+    background-color: lightgray;
+}
+
+button:hover {
+    color: lightgray;
+    transition-duration: .5s
 }
 
 #container {
     margin: auto;
-    width: 1200px;
+    /*width: 1200px;*/
     display: grid;
-    grid-template-rows: auto auto auto 200px;
+    grid-template-rows: auto auto auto auto;
     grid-template-columns: [col-left] 33% [col-middle] 34% [col-middle-2]33% [col-right];
     grid-template-areas: "header header header" "main main main-img" "card1 card2 card3" "footer footer footer";
 }
 
 #main-header {
-    background-color: lightblue;
+    background-size: cover;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.3)), url("https://live.staticflickr.com/3950/15514140438_d94b69f039_o_d.jpg");
     grid-area: header;
     display: grid;
     grid-template-rows: [navbar-begin] 60px [header-begin] auto
@@ -25,32 +46,101 @@ body {
     justify-content: space-between;
 }
 
+#main-navbar ul {
+    margin: 0;
+    align-self: center;
+}
+
 #main-navbar li {
     display: inline-block;
+    padding: 10px 20px;
+}
+
+#main-navbar li>a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+#main-navbar li>a:hover {
+    color: lightgrey;
+    transition-duration: 0.5s;
 }
 
 #main-navbar #logo {
-    align-self: flex-end;
-    justify-self: end
+    margin-left: 10px;
+    align-self: center;
+    justify-self: end;
+}
+
+#main-navbar #logo img {
+    max-height: 40px;
 }
 
 #main-navbar button {
-    align-self: flex-end;
-    justify-self: end
+    padding: 10px;
+    align-self: center;
+    justify-self: end;
+    border: solid white 2px;
+    background-color: dimgrey;
+    color: white;
+    margin: auto 20px;
+}
+
+#main-navbar button:active {
+    background-color: lightgray;
+}
+
+#main-navbar button:hover {
+    color: lightgray;
+    transition-duration: .5s
 }
 
 #header-title {
+    color: white;
+    text-shadow: 0px 0px 14px black;
+    font-size: 2.5em;
     text-align: center;
 }
 
+#header-title>h2 {
+    font-size: 1em;
+}
+
+#header-title button {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-shadow: 0px 0px 14px black;
+    font-weight: lighter;
+    font-size: .5em;
+    border: solid white 2px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#header-title button:active {
+    background-color: lightgray;
+}
+
+#header-title button:hover {
+    color: lightgray;
+    transition-duration: .5s
+}
+
 #main-description {
-    background-color: thistle;
+    margin: 0 auto;
     grid-area: main;
+    padding: 30px;
 }
 
 #main-description-image {
-    grid-area: main-img;
     margin: auto;
+    grid-area: main-img;
+}
+
+#main-description-image img {
+    padding: 3%;
+    max-width: 90%;
 }
 
 #card1 {
@@ -68,8 +158,109 @@ body {
     grid-area: card3;
 }
 
+.single-card {
+    width: 90%;
+    min-height: 600px;
+    margin: auto auto 20px auto;
+}
+
+.single-card .card-image h1 {
+    text-shadow: 0px 0px 20px black;
+    color: white;
+    margin: 30px auto 0 auto;
+}
+
+.single-card .card-image button {
+    background: rgba(0, 0, 0, .4);
+    font-size: 1em;
+    padding: 10px;
+    margin: auto auto 10% auto;
+}
+
+.single-card .card-image {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    width: 100%;
+    height: 100%;
+    background-size: 10vw;
+    background-size: cover;
+}
+
+.single-card h3 {
+    text-align: center;
+}
+
+.single-card .card-description {
+    padding: 10px;
+}
+
+#card1 .card-image {
+    background-size: cover;
+    background-image: url("https://4.bp.blogspot.com/-Nz1kRQqVrm0/W7sINtKn56I/AAAAAAAAA4s/gCfbDT017XwiCozHtfz-XdJKcWT0Hl1bQCLcBGAs/s1600/ciasto%2Borzechowe.JPG")
+}
+
+#card2 .card-image {
+    background-size: cover;
+    background-image: url("https://media.kaufland.com/images/PPIM/AP_Content_1010/std.lang.all/79/46/Asset_817946.jpg")
+}
+
+#card3 .card-image {
+    background-size: cover;
+    background-image: url("https://foodmag.pl/wp-content/uploads/images/IMG_0224-900x600.jpg")
+}
+
 #main-footer {
-    background-color: lightgreen;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: dimgrey;
+    color: white;
     grid-area: footer;
     display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: [col-left] 25% [col-middle] 40% [col-middle-2]20% [col-middle-2]15% [col-right];
+    grid-template-areas: "top1 top2 top3 top4" "bottom1 bottom2 bottom3 bottom4";
+}
+
+#footer-logo {
+    text-align: left;
+    margin: 5px;
+    grid-area: top1;
+}
+
+#footer-logo img {
+    margin-left: 10px;
+    max-height: 50px;
+}
+
+#footer-content {
+    text-align: center;
+    grid-area: top2;
+}
+
+#footer-info {
+    grid-area: top3;
+}
+
+#footer-links {
+    grid-area: top4;
+}
+
+#footer-links *:visited,
+#footer-links *:link {
+    color: white;
+    text-decoration: none;
+}
+
+#footer-copyright {
+    grid-area: bottom2;
+}
+
+#footer-info2 {
+    grid-area: bottom3;
+}
+
+#footer-info3 {
+    grid-area: bottom4;
 }
