@@ -1,0 +1,9 @@
+body {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.jumbotron {
+    background-size: cover;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.3)), url("https://www.insidehighered.com/sites/default/server_files/media/iStock-636447976.jpg");
+}
