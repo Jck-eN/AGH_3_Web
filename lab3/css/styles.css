@@ -1,0 +1,373 @@
+body {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    text-shadow: 0px 0px 14px black;
+    font-weight: lighter;
+    border: solid white 2px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+button:active {
+    background-color: lightgray;
+}
+
+button:hover {
+    color: lightgray;
+    transition-duration: .5s
+}
+
+#container {
+    margin: auto;
+    /*width: 1200px;*/
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: [col-left] 33% [col-middle] 34% [col-middle-2]33% [col-right];
+    grid-template-areas: "header header header" "main main main-img" "card1 card2 card3" "card4 card5 card6" "footer footer footer";
+}
+
+#main-header {
+    background-size: cover;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.3)), url("https://live.staticflickr.com/3950/15514140438_d94b69f039_o_d.jpg");
+    grid-area: header;
+    display: grid;
+    grid-template-rows: [navbar-begin] 60px [header-begin] auto
+}
+
+#main-navbar {
+    background-color: dimgrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#main-navbar ul {
+    margin: 0;
+    align-self: center;
+}
+
+#main-navbar li {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+#main-navbar li>a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+#main-navbar li>a:hover {
+    color: lightgrey;
+    transition-duration: 0.5s;
+}
+
+#main-navbar #logo {
+    margin-left: 10px;
+    align-self: center;
+    justify-self: end;
+}
+
+#main-navbar #logo img {
+    max-height: 40px;
+}
+
+#main-navbar button {
+    padding: 10px;
+    align-self: center;
+    justify-self: end;
+    border: solid white 2px;
+    background-color: dimgrey;
+    color: white;
+    margin: auto 20px;
+}
+
+#main-navbar button:active {
+    background-color: lightgray;
+}
+
+#main-navbar button:hover {
+    color: lightgray;
+    transition-duration: .5s
+}
+
+#header-title {
+    color: white;
+    text-shadow: 0px 0px 14px black;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+#header-title>h2 {
+    font-size: 1em;
+}
+
+#header-title button {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-shadow: 0px 0px 14px black;
+    font-weight: lighter;
+    font-size: .5em;
+    border: solid white 2px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#header-title button:active {
+    background-color: lightgray;
+}
+
+#header-title button:hover {
+    color: lightgray;
+    transition-duration: .5s
+}
+
+#main-description {
+    margin: 0 auto;
+    grid-area: main;
+    padding: 30px;
+}
+
+#main-description-image {
+    margin: auto;
+    grid-area: main-img;
+}
+
+#main-description-image img {
+    padding: 3%;
+    max-width: 90%;
+}
+
+#card1 {
+    background-color: beige;
+    grid-area: card1;
+}
+
+#card2 {
+    background-color: beige;
+    grid-area: card2;
+}
+
+#card3 {
+    background-color: beige;
+    grid-area: card3;
+}
+
+#card4 {
+    background-color: beige;
+    grid-area: card4;
+}
+
+#card5 {
+    background-color: beige;
+    grid-area: card5;
+}
+
+#card6 {
+    background-color: beige;
+    grid-area: card6;
+}
+
+.single-card {
+    width: 90%;
+    margin: 20px auto 50px auto;
+}
+
+.single-card .card-image h1 {
+    text-shadow: 0px 0px 20px black;
+    color: white;
+    margin: 30px auto 0 auto;
+}
+
+.single-card .card-image button {
+    background: rgba(0, 0, 0, .4);
+    font-size: 1em;
+    padding: 10px;
+    margin: auto auto 10% auto;
+}
+
+.single-card .card-image {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    width: 100%;
+    height: 100%;
+    background-size: 10vw;
+    background-size: cover;
+}
+
+.card-bottom-container {
+    position: relative;
+}
+
+.single-card .card-bottom {
+    width: 100%;
+    background-color: beige;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: height .2s ease-out;
+    overflow: hidden;
+    height: 0;
+}
+
+.card-desciption-additional {
+    display: none;
+}
+
+.single-card h3 {
+    text-align: center;
+}
+
+.single-card .card-description {
+    padding: 10px;
+}
+
+#card1 .card-image {
+    background-size: cover;
+    background-image: url("https://4.bp.blogspot.com/-Nz1kRQqVrm0/W7sINtKn56I/AAAAAAAAA4s/gCfbDT017XwiCozHtfz-XdJKcWT0Hl1bQCLcBGAs/s1600/ciasto%2Borzechowe.JPG")
+}
+
+#card2 .card-image {
+    background-size: cover;
+    background-image: url("https://media.kaufland.com/images/PPIM/AP_Content_1010/std.lang.all/79/46/Asset_817946.jpg")
+}
+
+#card3 .card-image {
+    background-size: cover;
+    background-image: url("https://foodmag.pl/wp-content/uploads/images/IMG_0224-900x600.jpg")
+}
+
+#card4 .card-image {
+    background-size: cover;
+    background-image: url("https://s3.przepisy.pl/przepisy3ii/img/variants/767x0/wuzetka6100240536839567.jpg")
+}
+
+#card5 .card-image {
+    background-size: cover;
+    background-image: url("https://s3.przepisy.pl/przepisy3ii/img/variants/1920x1080/sernik-krolewski-4.jpg")
+}
+
+#card6 .card-image {
+    background-size: cover;
+    background-image: url("https://static.smaker.pl/photos/b/e/6/be638f4f34bf630e95d95ceeb055f537_361491_57b1f97e19f1e_wm.jpg")
+}
+
+#main-footer {
+    margin-top: 350px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: dimgrey;
+    color: white;
+    grid-area: footer;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: [col-left] 25% [col-middle] 40% [col-middle-2]20% [col-middle-2]15% [col-right];
+    grid-template-areas: "top1 top2 top3 top4" "bottom1 bottom2 bottom3 bottom4";
+}
+
+#footer-logo {
+    text-align: left;
+    margin: 5px;
+    grid-area: top1;
+}
+
+#footer-logo img {
+    margin-left: 10px;
+    max-height: 50px;
+}
+
+#footer-content {
+    text-align: center;
+    grid-area: top2;
+}
+
+#footer-info {
+    grid-area: top3;
+}
+
+#footer-links {
+    grid-area: top4;
+}
+
+#footer-links *:visited,
+#footer-links *:link {
+    color: white;
+    text-decoration: none;
+}
+
+#footer-copyright {
+    grid-area: bottom2;
+}
+
+#footer-info2 {
+    grid-area: bottom3;
+}
+
+#footer-info3 {
+    grid-area: bottom4;
+}
+
+@media screen and (max-width: 855px) {
+    #container {
+        margin: auto;
+        /*width: 1200px;*/
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: "header " "main-img" "main" "card1" "card2" "card3" "card4" "card5" "card6" "footer";
+    }
+    nav button {
+        font-size: 10px;
+        max-height: 80%;
+        padding: 3px;
+    }
+    #main-navbar li {
+        font-size: 0.9em;
+        padding: 3px
+    }
+    #main-description-image {
+        text-align: center;
+    }
+    #logo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #main-navbar ul {
+        margin: auto;
+        padding: 5px
+    }
+    #main-navbar {
+        flex-direction: column;
+    }
+    #main-navbar li {
+        padding: 5px;
+        display: block;
+    }
+    #header-title h1 {
+        font-size: 0.8em;
+    }
+    #header-title h2 {
+        font-size: 0.6em;
+    }
+    #main-header {
+        grid-template-rows: [navbar-begin] auto [header-begin] auto
+    }
+    #main-navbar button {
+        margin: 10px;
+    }
+    #main-footer {
+        display: block;
+    }
+    #main-footer>div {
+        padding: 5px;
+    }
+}
