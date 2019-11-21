@@ -1,6 +1,11 @@
 body {
+    scroll-behavior: smooth;
     margin: 0px;
     font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 button {
@@ -127,6 +132,14 @@ button:hover {
     transition-duration: .5s
 }
 
+#cookie-baner {
+    display: inline;
+    position: sticky;
+    bottom: 30px;
+    right: 20px;
+    background-color: aliceblue;
+}
+
 #main-description {
     margin: 0 auto;
     grid-area: main;
@@ -139,7 +152,8 @@ button:hover {
 }
 
 #main-description-image img {
-    padding: 3%;
+    box-shadow: 3px 3px 10px 5px grey;
+    margin: 3%;
     max-width: 90%;
 }
 
@@ -174,6 +188,7 @@ button:hover {
 }
 
 .single-card {
+    box-shadow: 3px 3px 10px 5px lightgrey;
     width: 90%;
     margin: 20px auto 50px auto;
 }
@@ -370,4 +385,57 @@ button:hover {
     #main-footer>div {
         padding: 5px;
     }
+}
+
+.intro-copy {
+    padding: 1em;
+    margin: 50vh auto;
+    max-width: 15em;
+    font-family: Helvetica;
+    font-weight: lighter;
+    font-size: 2em;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.top-scroll {
+    transition: all .25s ease-in-out;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3em 3em 0;
+    border-radius: 50%;
+    padding: .25em;
+    width: 60px;
+    height: 60px;
+    border: 2px solid grey;
+    background-color: rgb(255, 255, 255);
+}
+
+.top-scroll.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.top-scroll.hide {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.top-scroll svg {
+    fill: rgb(0, 0, 0);
+    width: 24px;
+    height: 12px;
+}
+
+.top-scroll:hover {
+    background-color: rgb(161, 161, 161);
+}
+
+.top-scroll:hover svg {
+    fill: #000000;
 }
