@@ -27,9 +27,17 @@ cards.forEach(card => {
 });
 
 
-const scrollTopPageButton = document.getElementById('scroll-button');
-const scrolledPage = () => {
-    let y = window.scrollY;
+var cake_button = document.querySelector("#cake-zone");
+cake_button.addEventListener("click", () => {
+    person = prompt("Podaj swoje imię, miłośniku dobrego jedzenia :D")
+    if (person == null) cake_button.innerHTML = "Strefa zalogowanego smakosza";
+    cake_button.innerHTML = "Witaj, " + person + "!";
+})
+
+
+var scrollTopPageButton = document.getElementById('scroll-button');
+var scrolledPage = () => {
+    var y = window.scrollY;
     if (y > 0) {
         scrollTopPageButton.className = "top-scroll show";
     } else {
@@ -39,7 +47,7 @@ const scrolledPage = () => {
 
 window.addEventListener("scroll", scrolledPage);
 
-const scrollTopPage = () => {
+var scrollTopPage = () => {
     const c = document.documentElement.scrollTop || document.body.scrollTop;
     if (c > 0) {
         window.requestAnimationFrame(scrollTopPage);
