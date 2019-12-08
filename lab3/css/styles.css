@@ -200,6 +200,7 @@ button:hover {
 }
 
 .single-card .card-image button {
+    cursor: pointer;
     background: rgba(0, 0, 0, .4);
     font-size: 1em;
     padding: 10px;
@@ -214,6 +215,7 @@ button:hover {
     height: 100%;
     background-size: 10vw;
     background-size: cover;
+    transition: all 0.3s linear;
 }
 
 .card-bottom-container {
@@ -229,6 +231,7 @@ button:hover {
     transition: height .2s ease-out;
     overflow: hidden;
     height: 0;
+    z-index: 1000;
 }
 
 .card-desciption-additional {
@@ -271,6 +274,18 @@ button:hover {
 #card6 .card-image {
     background-size: cover;
     background-image: url("https://static.smaker.pl/photos/b/e/6/be638f4f34bf630e95d95ceeb055f537_361491_57b1f97e19f1e_wm.jpg")
+}
+
+.saturate06 {
+    filter: saturate(0.6)
+}
+
+.saturate10 {
+    filter: saturate(1)
+}
+
+.saturate03 {
+    filter: saturate(0.3)
 }
 
 #main-footer {
