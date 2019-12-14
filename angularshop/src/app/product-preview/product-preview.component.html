@@ -1,0 +1,37 @@
+<div class="preview-panel">
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <h3>{{product.name}}</h3>
+            </div>
+            <div class="col-6 text-right">
+                <button type="button" class="btn btn-warning" (click)=minus()>-</button>
+                <button type="button" class="btn btn-success" (click)=add()>+</button>
+                <button type="button" class="btn btn-danger" (click)="delete()">Usuń</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img class="img-thumbnail" src="{{product.photo}}">
+            </div>
+            <div class="col-8">
+                <table class="table">
+                    <tr>
+                        <td>Cena:</td>
+                        <td>{{product.price}}</td>
+                    </tr>
+                    <tr>
+                        <td>Ilość sztuk:</td>
+                        <td>{{product.amount}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
